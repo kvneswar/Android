@@ -1,14 +1,23 @@
 package org.example.sunshine;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,31 +29,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
-    public static class PlaceholderFragment extends Fragment{
-
-        private ArrayAdapter<String> arrayAdapter;
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-
-            View rootView = inflater.inflate(R.layout.fragment_placeholder, container, false);
-
-            List<String> list = Arrays.asList("Today - Sunny - 88/63",
-                                              "Tomorrow - Foggy - 70/46",
-                                              "Weds - Cloudy - 72/63",
-                                              "Thurs - Rainy - 64/51",
-                                              "Fri - Foggy - 70/46",
-                                              "Sat - Sunny - 76/68",
-                                              "Sun - Sunny - 92/69");
-
-            arrayAdapter = new ArrayAdapter(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview, list);
-            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
-            listView.setAdapter(arrayAdapter);
-            return rootView;
-        }
-
-    }
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }*/
 
 }

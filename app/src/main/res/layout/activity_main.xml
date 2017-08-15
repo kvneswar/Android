@@ -8,7 +8,7 @@
     tools:ignore="MergeRootFrame">
 
     <fragment
-    android:name="org.example.sunshine.MainActivity$PlaceholderFragment"
+    android:name="org.example.sunshine.ForecastFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
 

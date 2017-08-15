@@ -5,8 +5,7 @@
     android:paddingLeft="64dp"
     android:paddingRight="64dp"
     android:paddingTop="16dp"
-    android:paddingBottom="16dp"
-    tools:context="org.example.sunshine.MainActivity$PlaceholderFragment">
+    android:paddingBottom="16dp">
 
     <ListView
         android:layout_width="match_parent"
